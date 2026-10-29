@@ -72,8 +72,9 @@ const server = http.createServer((req, res) => {
     }
     const ext = path.extname(file).toLowerCase();
     const type = TYPES[ext] || "application/octet-stream";
-    // HTML и config.js не кэшируем надолго, чтобы правки цен/ссылок применялись сразу
-    const noLongCache = ext === ".html" || path.basename(file) === "config.js";
+    // HTML, CSS и JS не кэшируем надолго, чтобы правки после деплоя применялись сразу
+    // (браузер всё равно получит 304 по Last-Modified, если файл не менялся)
+    const noLongCache = ext === ".html" || ext === ".css" || ext === ".js";
     const headers = {
       "Content-Type": type,
       "Cache-Control": noLongCache ? "no-cache" : "public, max-age=604800",

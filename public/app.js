@@ -255,19 +255,23 @@
   var sticky = $("#stickyCta");
   var heroCta = $(".hero .cta-group");
   var finalBlock = $(".final");
-  var heroOut = false, finalIn = false;
+  // Панель видна, когда кнопки первого экрана ушли вверх, и прячется,
+  // как только виден финальный блок (и всё, что ниже него)
+  var stickyQueued = false;
   function updateSticky() {
+    stickyQueued = false;
+    var heroOut = heroCta.getBoundingClientRect().bottom < 0;
+    var finalIn = finalBlock.getBoundingClientRect().top < window.innerHeight * 0.7;
     var show = heroOut && !finalIn;
     sticky.classList.toggle("is-visible", show);
     document.body.style.setProperty("--sticky-h", show ? sticky.offsetHeight + "px" : "0px");
   }
-  window.addEventListener("scroll", function () { topbar.classList.toggle("is-scrolled", window.scrollY > 8); }, { passive: true });
-  if ("IntersectionObserver" in window) {
-    new IntersectionObserver(function (en) { heroOut = !en[0].isIntersecting && en[0].boundingClientRect.top < 0; updateSticky(); }).observe(heroCta);
-    new IntersectionObserver(function (en) { finalIn = en[0].isIntersecting; updateSticky(); }, { threshold: .3 }).observe(finalBlock);
-  } else {
-    heroOut = true; updateSticky();
-  }
+  window.addEventListener("scroll", function () {
+    topbar.classList.toggle("is-scrolled", window.scrollY > 8);
+    if (!stickyQueued) { stickyQueued = true; requestAnimationFrame(updateSticky); }
+  }, { passive: true });
+  window.addEventListener("resize", updateSticky);
+  updateSticky();
 
   // ── Карта мира ────────────────────────────────────────
   var SVGNS = "http://www.w3.org/2000/svg";

@@ -329,7 +329,8 @@ svg { flex-shrink: 0; }
 .step:nth-child(2) .step__icon { color: var(--green); }
 .step:nth-child(3) .step__icon { color: var(--orange); }
 .step:nth-child(4) .step__icon { color: var(--yellow); }
-.step h3 { font-size: 15px; font-weight: 800; padding-right: 30px; }
+.step > * { max-width: 100%; }
+.step h3 { font-size: 15px; font-weight: 800; overflow-wrap: anywhere; hyphens: auto; }
 .step p { font-size: 13px; color: var(--muted); }
 
 /* FAQ */
@@ -383,14 +384,14 @@ svg { flex-shrink: 0; }
 /* Закреплённая панель */
 .sticky-cta {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
-  display: grid; grid-template-columns: 1.15fr 1fr; gap: 8px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
   padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
   background: rgba(255, 255, 255, .96); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 -6px 24px rgba(18, 48, 95, .12);
   transform: translateY(110%); transition: transform .25s ease;
 }
 .sticky-cta.is-visible { transform: none; }
-.sticky-cta .btn { min-height: 50px; padding: 10px 10px; font-size: 14.5px; gap: 6px; }
+.sticky-cta .btn { min-height: 50px; padding: 10px 8px; font-size: 14px; gap: 6px; white-space: nowrap; }
 .sticky-cta .btn svg { width: 20px; height: 20px; }
 
 /* ── Адаптив ──────────────────────────────────────────── */
