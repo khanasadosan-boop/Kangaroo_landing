@@ -67,7 +67,7 @@ window.KANGAROO_CONFIG = {
 
   // ── Фото (замените файлы в public/assets/img/ на реальные фото) ──
   images: {
-    hero: "assets/img/hero-student.jpg",
+    hero: "assets/img/hero-kids.jpg",
     certificate: "assets/img/award-certificate.jpg",
     gift: "assets/img/award-gift.jpg",
     medals: "assets/img/award-medals.jpg",

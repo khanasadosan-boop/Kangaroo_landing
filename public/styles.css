@@ -123,17 +123,20 @@ svg { flex-shrink: 0; }
 
 /* ── Hero ─────────────────────────────────────────────── */
 .hero { position: relative; background: linear-gradient(180deg, #fff 0%, #fff 70%, var(--bg) 100%); overflow: hidden; }
-/* Мобильная сетка: заголовок во всю ширину, факты и цена слева, фото справа, кнопки во всю ширину */
+/* Мобильная сетка в одну колонку: заголовок, слоган, групповое фото, факты, цена, кнопки */
 .hero__inner {
-  display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); column-gap: 8px;
+  display: grid; grid-template-columns: minmax(0, 1fr);
   padding-top: 16px; padding-bottom: 24px; position: relative;
 }
 .hero__content { display: contents; }
-.hero__title { grid-column: 1 / -1; display: grid; gap: 6px; position: relative; z-index: 2; }
-.hero__slogan { grid-column: 1 / -1; }
-.facts, .price-pill { grid-column: 1; position: relative; z-index: 2; }
-.hero__visual { grid-column: 2; grid-row: 3 / span 2; }
-.hero .cta-group, .hero__note { grid-column: 1 / -1; position: relative; z-index: 2; }
+.hero__title { order: 1; display: grid; gap: 6px; position: relative; z-index: 2; }
+.hero__slogan { order: 2; }
+.hero__visual { order: 3; }
+.facts { order: 4; }
+.price-pill { order: 5; }
+.hero .cta-group { order: 6; }
+.hero__note { order: 7; }
+.facts, .price-pill, .hero .cta-group, .hero__note { position: relative; z-index: 2; }
 
 .hero__brand { font-weight: 900; font-size: clamp(36px, 10.6vw, 72px); letter-spacing: -.02em; line-height: 1; color: var(--blue-dark); white-space: nowrap; }
 .hero__year { color: var(--green); }
@@ -146,7 +149,7 @@ svg { flex-shrink: 0; }
   background: linear-gradient(90deg, var(--orange), rgba(242,107,29,0)) left bottom / 100% 3px no-repeat;
 }
 
-.facts { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 10px; align-content: start; }
+.facts { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; align-content: start; }
 .facts li { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 600; color: var(--ink); line-height: 1.25; }
 .facts__icon { width: 22px; height: 22px; color: var(--green); }
 
@@ -162,13 +165,10 @@ svg { flex-shrink: 0; }
 .hero .cta-group { margin-top: 20px; }
 .hero__note { margin-top: 10px; font-size: 13px; color: var(--muted); text-align: center; }
 
-.hero__visual { position: relative; z-index: 1; align-self: stretch; margin: 10px -16px 0 -24px; pointer-events: none; min-height: 250px; }
+.hero__visual { position: relative; z-index: 1; margin-top: 16px; aspect-ratio: 3 / 2; pointer-events: none; }
 .hero__photo {
-  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 30% top;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 22%), linear-gradient(180deg, #000 80%, transparent 100%);
-  -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(90deg, transparent 0, #000 22%), linear-gradient(180deg, #000 80%, transparent 100%);
-  mask-composite: intersect;
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
+  border-radius: 22px; box-shadow: var(--shadow-lg);
 }
 .deco { position: absolute; z-index: 3; font-family: var(--font-head); font-weight: 800; line-height: 1; }
 .deco--pi, .deco--plus, .deco--x, .deco--tri, .deco--sq { display: none; }
@@ -424,10 +424,10 @@ svg { flex-shrink: 0; }
   .topnav { display: none; }
   .topbar__cta { display: inline-flex; }
 
-  .hero__inner { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 40px; padding-top: 48px; padding-bottom: 60px; align-items: center; }
+  .hero__inner { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 48px; padding-top: 48px; padding-bottom: 60px; align-items: center; }
   .hero__content { display: block; grid-column: 1; grid-row: 1; }
-  .hero__visual { grid-column: 2; grid-row: 1; margin: 0; min-height: 0; aspect-ratio: 4 / 5; max-height: 600px; }
-  .hero__photo { border-radius: 32px; object-position: center top; -webkit-mask-image: none; mask-image: none; box-shadow: var(--shadow-lg); }
+  .hero__visual { grid-column: 2; grid-row: 1; margin: 0; aspect-ratio: 4 / 3.4; }
+  .hero__photo { border-radius: 32px; object-position: center 30%; }
   .hero__visual::before { content: ""; position: absolute; inset: 24px -24px -24px 24px; border-radius: 32px; background: linear-gradient(135deg, var(--green), #36A3F2 55%, var(--orange-2)); opacity: .9; }
   .hero__slogan { display: inline-block; }
   .facts { grid-template-columns: repeat(3, auto); justify-content: start; gap: 14px 22px; margin-top: 22px; }
