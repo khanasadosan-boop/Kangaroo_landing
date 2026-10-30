@@ -68,9 +68,9 @@ window.KANGAROO_CONFIG = {
   // ── Фото (замените файлы в public/assets/img/ на реальные фото) ──
   images: {
     hero: "assets/img/hero-kids.jpg",
-    certificate: "assets/img/award-certificate.jpg",
-    gift: "assets/img/award-gift.jpg",
-    medals: "assets/img/award-medals.jpg",
+    certificate: "assets/img/kangaroo-certificates.jpg",
+    gift: "assets/img/kangaroo-gifts.jpg",
+    medals: "assets/img/kangaroo-medals.jpg",
   },
 
   // ── Задача «Кенгуру» (предоставляется заказчиком) ─────────
