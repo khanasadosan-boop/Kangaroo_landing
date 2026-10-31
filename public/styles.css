@@ -65,6 +65,7 @@ svg { flex-shrink: 0; }
 .btn--sm { min-height: 40px; padding: 8px 16px; font-size: 14px; }
 .btn--primary { background: linear-gradient(180deg, var(--orange-2), var(--orange)); color: #fff; box-shadow: 0 8px 20px rgba(242, 107, 29, .32); }
 .btn--primary:hover { box-shadow: 0 10px 26px rgba(242, 107, 29, .45); transform: translateY(-1px); }
+.btn--primary svg:has(use[href="#i-tg"]) { color: #229ED9; }
 .btn--tg { background: #fff; color: var(--blue-dark); border-color: #9CC8F0; }
 .btn--tg svg { color: #229ED9; }
 .btn--tg:hover { background: var(--blue-soft); }

@@ -29,10 +29,11 @@ window.KANGAROO_I18N = {
     "hero.dateSet": "Дата конкурса — {date}",
     "hero.priceLabel": "Стоимость участия —",
     "hero.priceFrom": "от",
-    "hero.note": "Регистрация и оплата — на отдельном сайте или в Telegram-боте",
 
     "cta.register": "Зарегистрироваться",
     "cta.telegram": "Через Telegram",
+    "cta.tgRegister": "Регистрация в Telegram",
+    "cta.site": "Через сайт",
     "cta.join": "Принять участие",
 
     "why.title": "Почему стоит участвовать?",
@@ -93,7 +94,7 @@ window.KANGAROO_I18N = {
     "steps.title": "Как пройти регистрацию на конкурс?",
     "steps.subtitle": "Всего четыре простых шага",
     "steps.1.title": "Зарегистрируйтесь",
-    "steps.1.text": "Через сайт регистрации или Telegram-бот.",
+    "steps.1.text": "Через Telegram-бот или на сайте регистрации.",
     "steps.2.title": "Оплатите участие",
     "steps.2.text": "Удобным доступным способом.",
     "steps.3.title": "Готовьтесь к конкурсу любым доступным способом",
@@ -115,14 +116,14 @@ window.KANGAROO_I18N = {
     "faq.6.q": "Какие награды получают участники?",
     "faq.6.a": "Каждый участник получает именной сертификат и памятный подарок. 10% лучших в каждой параллели награждаются медалями.",
     "faq.7.q": "Как зарегистрироваться?",
-    "faq.7.a": "Нажмите «Зарегистрироваться» на этой странице или откройте Telegram-бот @Olympia_uz_bot, заполните данные ребёнка и оплатите участие.",
+    "faq.7.a": "Нажмите «Регистрация в Telegram» на этой странице: откроется бот @Olympia_uz_bot, где нужно заполнить данные ребёнка и оплатить участие. Также можно зарегистрироваться на сайте.",
     "faq.8.q": "Как узнать результаты?",
     "faq.8.a": "Результаты можно посмотреть в личном кабинете на сайте или в Telegram-боте. Вместе с результатами участник получает приложение к сертификату с анализом знаний.",
 
     "final.title": "Подарите ребёнку возможность мыслить шире!",
     "final.text": "Зарегистрируйтесь сейчас по выгодной цене — регистрация займёт пару минут.",
 
-    "footer.organizer": "Официальный организатор в Узбекистане — ООО «Олимпия»",
+    "footer.organizer": "Официальный организатор в Узбекистане — ООО «Olympia»",
     "footer.site": "Сайт",
     "footer.phone": "Телефон",
     "footer.channel": "Telegram-канал",
@@ -130,7 +131,7 @@ window.KANGAROO_I18N = {
     "footer.rules": "Положение конкурса",
     "footer.offer": "Публичная оферта",
     "footer.privacy": "Политика конфиденциальности",
-    "footer.copy": "© {year} ООО «Олимпия». Все права защищены.",
+    "footer.copy": "© {year} ООО «Olympia». Все права защищены.",
   },
 
   uz: {
@@ -158,10 +159,11 @@ window.KANGAROO_I18N = {
     "hero.priceLabel": "Qatnaşiş narxi —",
     "hero.priceFrom": "",
     "hero.priceSuffix": "dan",
-    "hero.note": "Röyxatdan ötiş va tölov — alohida saytda yoki Telegram-botda",
 
     "cta.register": "Röyxatdan ötiş",
     "cta.telegram": "Telegram orqali",
+    "cta.tgRegister": "Telegramda röyxatdan ötiş",
+    "cta.site": "Sayt orqali",
     "cta.join": "Qatnaşiş",
 
     "why.title": "Nega qatnaşiş kerak?",
@@ -222,7 +224,7 @@ window.KANGAROO_I18N = {
     "steps.title": "Tanlovga qanday röyxatdan ötiş mumkin?",
     "steps.subtitle": "Atigi törtta oddiy qadam",
     "steps.1.title": "Röyxatdan öting",
-    "steps.1.text": "Röyxat sayti yoki Telegram-bot orqali.",
+    "steps.1.text": "Telegram-bot orqali yoki röyxat saytida.",
     "steps.2.title": "Tölovni amalga oşiring",
     "steps.2.text": "Qulay usulda.",
     "steps.3.title": "Tanlovga istalgan qulay usulda tayyorlaning",
@@ -244,14 +246,14 @@ window.KANGAROO_I18N = {
     "faq.6.q": "Qatnaşçilar qanday mukofot oladi?",
     "faq.6.a": "Har bir qatnaşçi şaxsiy sertifikat va esdalik sovğasini oladi. Har bir paralleldagi eng yaxşi 10% medallar bilan taqdirlanadi.",
     "faq.7.q": "Qanday röyxatdan ötiş mumkin?",
-    "faq.7.a": "Uşbu sahifada «Röyxatdan ötiş» tugmasini bosing yoki @Olympia_uz_bot Telegram-botini oçing, farzandingiz ma’lumotlarini kiriting va tölovni amalga oşiring.",
+    "faq.7.a": "Uşbu sahifada «Telegramda röyxatdan ötiş» tugmasini bosing: @Olympia_uz_bot bot oçiladi, unda farzandingiz ma’lumotlarini kiriting va tölovni amalga oşiring. Saytda ham röyxatdan ötiş mumkin.",
     "faq.8.q": "Natijalarni qanday bilsa böladi?",
     "faq.8.a": "Natijalarni shaxsiy kabinetda saytda yoki Telegram-botda ko‘rish mumkin. Natijalar bilan birga ishtirokchi bilimlar tahlili yozilgan sertifikat ilovasini oladi.",
 
     "final.title": "Farzandingizga kengroq fikrlaş imkoniyatini sovğa qiling!",
     "final.text": "Hoziroq foydali narxda röyxatdan öting — bu bir neça daqiqa oladi.",
 
-    "footer.organizer": "Özbekistondagi rasmiy taşkilotçi — «Olimpiya» MChJ",
+    "footer.organizer": "Özbekistondagi rasmiy taşkilotçi — «Olympia» MChJ",
     "footer.site": "Sayt",
     "footer.phone": "Telefon",
     "footer.channel": "Telegram-kanal",
@@ -259,6 +261,6 @@ window.KANGAROO_I18N = {
     "footer.rules": "Tanlov nizomi",
     "footer.offer": "Ommaviy oferta",
     "footer.privacy": "Maxfiylik siyosati",
-    "footer.copy": "© {year} «Olimpiya» MChJ. Barça huquqlar himoyalangan.",
+    "footer.copy": "© {year} «Olympia» MChJ. Barça huquqlar himoyalangan.",
   },
 };
