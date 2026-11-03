@@ -16,9 +16,9 @@ window.KANGAROO_CONFIG = {
     site: "https://olympia.uz",
     phone: "+998955151500",
     // Документы (положите PDF в public/docs/ или укажите внешние ссылки)
-    rules: "#",
-    offer: "#",
-    privacy: "#",
+    rules: { ru: "https://olympia.uz/ru/page/16", uz: "https://olympia.uz/uz/page/16" },
+    offer: { ru: "https://olympia.uz/ru/page/public-offer-olympia", uz: "https://olympia.uz/uz/page/public-offer-olympia" },
+    privacy: { ru: "https://olympia.uz/ru/page/payment-systems-security", uz: "https://olympia.uz/uz/page/payment-systems-security" },
   },
 
   // Передавать utm_* из рекламы (Telegram/Instagram) на сайт регистрации,
@@ -70,7 +70,7 @@ window.KANGAROO_CONFIG = {
     hero: "assets/img/hero-kids.jpg",
     certificate: "assets/img/kangaroo-certificates.jpg",
     gift: "assets/img/kangaroo-gifts.jpg",
-    medals: "assets/img/kangaroo-medals.jpg",
+    medals: "assets/img/kangaroo-medal.jpg",
   },
 
   // ── Задача «Кенгуру» (предоставляется заказчиком) ─────────

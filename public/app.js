@@ -101,10 +101,11 @@
     });
     $$("[data-link]").forEach(function (a) {
       var key = a.getAttribute("data-link");
-      var v = CFG.links[key];
+      var v = pick(CFG.links[key]);
       if (!v) return;
       a.href = key === "phone" ? "tel:" + v : v;
       if (v === "#") { a.removeAttribute("target"); }
+      else if (/^https?:/.test(v)) { a.target = "_blank"; a.rel = "noopener"; }
     });
   }
 

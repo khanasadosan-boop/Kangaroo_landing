@@ -278,7 +278,7 @@ svg { flex-shrink: 0; }
 .award h3 { margin-top: 10px; font-size: 15px; font-weight: 800; padding: 0 4px; }
 .award p { margin-top: 2px; font-size: 13px; color: var(--muted); padding: 0 4px; }
 .award--best { display: grid; grid-template-columns: 42% 1fr; gap: 0 12px; align-items: center; background: linear-gradient(135deg, #FFF9E6, #FFF1C9); border-color: #F5D77A; }
-.award--best .award__img { grid-row: span 2; }
+.award--best .award__img { grid-row: span 2; aspect-ratio: 1 / 1; }
 .award--best h3 { margin-top: 0; align-self: end; }
 .award--best p { align-self: start; }
 
