@@ -196,7 +196,15 @@
     var heroDate = $("#heroDate");
     if (CFG.contestDate) {
       var d = new Date(CFG.contestDate + "T00:00:00+05:00");
-      var fmt = d.toLocaleDateString(lang === "uz" ? "uz-Latn-UZ" : "ru-RU", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Tashkent" });
+      var fmt;
+      if (lang === "uz") {
+        // В браузерах без полной локали uz toLocaleDateString отдаёт «2027 M03 26», поэтому месяцы свои
+        var UZ_MONTHS = ["yanvar", "fevral", "mart", "aprel", "may", "iyun", "iyul", "avgust", "sentyabr", "oktyabr", "noyabr", "dekabr"];
+        var p = CFG.contestDate.split("-");
+        fmt = p[0] + "-yil " + parseInt(p[2], 10) + "-" + UZ_MONTHS[parseInt(p[1], 10) - 1];
+      } else {
+        fmt = d.toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Tashkent" });
+      }
       heroDate.textContent = t("hero.dateSet", { date: fmt });
     }
     $("#copy").textContent = t("footer.copy", { year: new Date().getFullYear() });
